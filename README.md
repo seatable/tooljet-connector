@@ -31,7 +31,7 @@ npm run watch     # Watch mode for development
 
 ## Testing
 
-Integration tests run against a real SeaTable instance:
+All API endpoints have been verified against a real SeaTable instance. The test suite covers the full CRUD lifecycle (create → read → update → SQL search → delete) as well as authentication, metadata retrieval, and error handling. No mocks are used — every test hits a live SeaTable server.
 
 ```bash
 SEATABLE_TEST_SERVER_URL=https://your-seatable-server.com \
@@ -39,7 +39,7 @@ SEATABLE_TEST_API_TOKEN=your_api_token_here \
 npm test
 ```
 
-Without the environment variables, integration tests are skipped automatically.
+Without the environment variables, tests are skipped automatically.
 
 ## File Structure
 
